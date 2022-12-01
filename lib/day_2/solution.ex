@@ -10,7 +10,7 @@ defmodule Solutions.Day_2 do
   end
 
   def run() do
-    input = Helpers.read_input("day_1")
+    input = Helpers.read_input("day_2")
 
     solution_1 = solve_part_1(input)
 
