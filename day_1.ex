@@ -4,30 +4,33 @@ defmodule AdventOfCode do
     file
   end
 
-  def parse_single_elf(input) do
-    input
-    |> String.split("\n")
+  def parse_input(input) do
+    String.split(input, "\n\n")
+    |> Enum.map(&parse_single_elf(&1))
+  end
+
+  def parse_single_elf(rows) do
+    String.split(rows, "\n")
     |> Enum.map(fn row ->
-      row
-      |> String.trim()
+      String.trim(row)
       |> String.to_integer()
     end)
     |> Enum.sum()
   end
 
   def solve_part_1(input) do
-    String.split(input, "\n\n")
-    |> Enum.map(fn x -> parse_single_elf(x) end)
+    parse_input(input)
     |> Enum.max()
   end
 
   def solve_part_2(input) do
-    String.split(input, "\n\n")
-    |> Enum.map(fn x -> parse_single_elf(x) end)
-    |> Enum.sort()
-    |> Enum.reverse()
+    parse_input(input)
+    |> Enum.sort(:desc)
     |> Enum.take(3)
     |> Enum.sum()
+  end
+
+  def solve_better do
   end
 
   def main() do
