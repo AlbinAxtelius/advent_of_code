@@ -1,9 +1,6 @@
-defmodule AdventOfCode do
-  def read_input(filename) do
-    {:ok, file} = File.read(filename)
-    file
-  end
+alias AdventOfCode.Helpers
 
+defmodule Solutions.Day_1 do
   def parse_input(input) do
     String.split(input, "\n\n")
     |> Enum.map(&parse_single_elf(&1))
@@ -33,8 +30,8 @@ defmodule AdventOfCode do
   def solve_better do
   end
 
-  def main() do
-    input = read_input("day_1.in")
+  def run() do
+    input = Helpers.read_input("day_1")
 
     solution_1 = solve_part_1(input)
     solution_2 = solve_part_2(input)
@@ -43,5 +40,3 @@ defmodule AdventOfCode do
     IO.puts(solution_2)
   end
 end
-
-AdventOfCode.main()
