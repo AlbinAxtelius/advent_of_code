@@ -27,9 +27,6 @@ defmodule Solutions.Day_1 do
     |> Enum.sum()
   end
 
-  def solve_better do
-  end
-
   def run() do
     input = Helpers.read_input("day_1")
 
