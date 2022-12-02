@@ -11,15 +11,15 @@ defmodule Solutions.Day_2 do
   }
 
   @inverted_choices %{
-    :rock => :paper,
-    :paper => :scissors,
-    :scissors => :rock
+    rock: :paper,
+    paper: :scissors,
+    scissors: :rock
   }
 
   @scores %{
-    :rock => 1,
-    :paper => 2,
-    :scissors => 3
+    rock: 1,
+    paper: 2,
+    scissors: 3
   }
 
   @part2_outcomes %{
