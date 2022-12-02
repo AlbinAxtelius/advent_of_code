@@ -45,23 +45,17 @@ defmodule Solutions.Day_2 do
       row
       |> String.trim()
       |> String.split(" ")
-      |> create_outcome_tuple()
-      |> convert_to_choice_tuple()
+      |> create_choice_tuple()
     end)
   end
 
-  def create_outcome_tuple([player1, player2]) do
-    {
-      @string_to_choices[player1],
-      @part2_outcomes[player2]
-    }
+  def create_choice_tuple([player1, player2]) do
+    case {@string_to_choices[player1], @part2_outcomes[player2]} do
+      {value, :lose} -> {value, @inverted_choices[@inverted_choices[value]]}
+      {value, :draw} -> {value, value}
+      {value, :win} -> {value, @inverted_choices[value]}
+    end
   end
-
-  def convert_to_choice_tuple({value, :lose}),
-    do: {value, @inverted_choices[@inverted_choices[value]]}
-
-  def convert_to_choice_tuple({value, :win}), do: {value, @inverted_choices[value]}
-  def convert_to_choice_tuple({value, :draw}), do: {value, value}
 
   def calculate_score_for_one_round(round) do
     {_, player_choice} = round
