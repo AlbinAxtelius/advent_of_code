@@ -21,6 +21,7 @@ defmodule Solutions.Day_4.Part_2 do
     |> MapSet.new()
   end
 
+  @spec parse_line(String.t()) :: non_neg_integer
   def parse_line(line) do
     line
     |> String.split(",")
@@ -29,12 +30,14 @@ defmodule Solutions.Day_4.Part_2 do
     |> get_overlaps()
   end
 
+  @spec parse_input(String.t()) :: [String.t()]
   def parse_input(input) do
     input
     |> String.split("\n")
     |> Enum.map(&parse_line/1)
   end
 
+  @spec solve_part_1(String.t()) :: non_neg_integer
   def solve_part_1(input) do
     parse_input(input)
     |> Enum.filter(&(&1 > 0))
