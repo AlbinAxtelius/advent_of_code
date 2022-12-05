@@ -55,10 +55,10 @@ defmodule Solutions.Day_5.Part_1 do
     |> Enum.map(&String.split(&1, " "))
     |> Enum.reduce(initial_yard, fn instruction, yard ->
       case instruction do
-        ["move", move, "from", from, "to", to] ->
+        ["move", count, "from", from, "to", to] ->
           move_containers(
             yard,
-            String.to_integer(move),
+            String.to_integer(count),
             String.to_integer(from),
             String.to_integer(to)
           )
