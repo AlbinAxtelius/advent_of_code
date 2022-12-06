@@ -1,13 +1,15 @@
 alias AdventOfCode.Helpers
 
 defmodule Solutions.Day_6.Part_1 do
+  @chunk_size 4
+
   @spec check_start_signal([String.t()], [non_neg_integer()], non_neg_integer()) :: [
           non_neg_integer()
         ]
   def check_start_signal(chunk, matches, end_index) do
-    block = Enum.take(chunk, 4)
+    block = Enum.take(chunk, @chunk_size)
 
-    if length(block) != 4 do
+    if length(block) != @chunk_size do
       end_index
     else
       unique_letters_length = MapSet.new(block) |> MapSet.size()
@@ -24,7 +26,7 @@ defmodule Solutions.Day_6.Part_1 do
   def solve(input) do
     input
     |> String.codepoints()
-    |> check_start_signal([], 4)
+    |> check_start_signal([], @chunk_size)
   end
 
   def run() do
