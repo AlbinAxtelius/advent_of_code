@@ -1,26 +1,27 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions_2020.Day_2.Part_1 do
-  @spec parse_row([String.t()]) :: {Range.t(), String.t(), String.t()}
+defmodule Solutions_2020.Day_2.Part_2 do
+  @spec parse_row([String.t()]) :: {String.t(), String.t(), String.t()}
   def parse_row([range, letter, password]) do
     [start, stop] =
       range
       |> String.split("-")
       |> Enum.map(&String.to_integer/1)
+      |> Enum.map(&(&1 - 1))
+      |> Enum.map(&String.at(password, &1))
 
-    {Range.new(start, stop), String.at(letter, 0), password}
+    {String.at(letter, 0), start, stop}
   end
 
   @spec solve_row(String.t()) :: boolean()
   def solve_row(row) do
-    {range, letter, password} = row |> String.split(" ") |> parse_row()
+    {letter, first, second} = row |> String.split(" ") |> parse_row()
 
-    letter_counts =
-      password
-      |> String.graphemes()
-      |> Enum.count(&(&1 == letter))
-
-    Enum.member?(range, letter_counts)
+    if first == second do
+      false
+    else
+      first == letter or second == letter
+    end
   end
 
   @spec solve(String.t()) :: non_neg_integer()
