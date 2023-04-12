@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_18.Part_1 do
+defmodule Solutions_2022.Day_18.Part_1 do
   alias Day18.Solution1.Droplet
 
   @spec tuple_to_string(Tuple.t()) :: String.t()

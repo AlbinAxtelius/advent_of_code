@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_5.Part_1 do
+defmodule Solutions_2022.Day_5.Part_1 do
   @spec parse_stacks(String.t()) :: binary()
   def parse_stacks(input) do
     [_keys | crates] =

@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_2 do
+defmodule Solutions_2022.Day_2 do
   @string_to_choices %{
     "A" => :rock,
     "B" => :paper,

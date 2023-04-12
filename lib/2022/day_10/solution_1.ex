@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_10.Part_1 do
+defmodule Solutions_2022.Day_10.Part_1 do
   def should_check_strength?(0), do: false
   def should_check_strength?(20), do: true
 

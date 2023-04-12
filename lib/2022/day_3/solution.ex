@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_3 do
+defmodule Solutions_2022.Day_3 do
   @spec get_letter_priority(String.t()) :: number
   def get_letter_priority(letter) do
     first_letter = String.at(letter, 0)

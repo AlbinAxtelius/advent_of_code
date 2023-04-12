@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_4.Part_1 do
+defmodule Solutions_2022.Day_4.Part_1 do
   @spec check_is_contained([{integer(), integer()}]) :: boolean
   def check_is_contained([{start_1, end_1}, {start_2, end_2}]) do
     (start_1 <= start_2 and end_1 >= end_2) or (start_2 <= start_1 and end_2 >= end_1)

@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_6.Part_2 do
+defmodule Solutions_2022.Day_6.Part_2 do
   @chunk_size 14
 
   @spec check_start_signal([String.t()], [non_neg_integer()], non_neg_integer()) :: [

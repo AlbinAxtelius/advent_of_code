@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_10.Part_2 do
+defmodule Solutions_2022.Day_10.Part_2 do
   @screen_width 40
   @screen_height 6
 

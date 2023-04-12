@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_1 do
+defmodule Solutions_2022.Day_1 do
   def parse_input(input) do
     String.split(input, "\n\n")
     |> Enum.map(&parse_single_elf(&1))

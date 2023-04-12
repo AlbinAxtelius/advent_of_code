@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_9.Part_1 do
+defmodule Solutions_2022.Day_9.Part_1 do
   @type position :: %{x: integer, y: integer}
 
   @spec need_to_move?(position, position) :: boolean()

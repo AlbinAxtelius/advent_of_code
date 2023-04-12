@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_8.Part_1 do
+defmodule Solutions_2022.Day_8.Part_1 do
   def is_visible_from(grid, current, :top) do
     column =
       Enum.filter(grid, fn x -> x.x == current.x end) |> Enum.filter(fn x -> x.y < current.y end)

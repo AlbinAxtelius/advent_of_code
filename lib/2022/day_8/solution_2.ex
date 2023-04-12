@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_8.Part_2 do
+defmodule Solutions_2022.Day_8.Part_2 do
   def get_scenic_score(grid, current, :top) do
     column =
       Enum.filter(grid, fn x -> x.x == current.x end)

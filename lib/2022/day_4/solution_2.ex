@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_4.Part_2 do
+defmodule Solutions_2022.Day_4.Part_2 do
   @spec get_overlaps([MapSet.t()]) :: non_neg_integer()
   def get_overlaps([set_1, set_2]) do
     set_1

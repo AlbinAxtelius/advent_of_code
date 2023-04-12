@@ -1,6 +1,6 @@
 alias AdventOfCode.Helpers
 
-defmodule Solutions.Day_7.Part_2 do
+defmodule Solutions_2022.Day_7.Part_2 do
   @path_separator "."
 
   @spec handle_move(String.t(), {[String.t()], String.t()}) :: {[String.t()], String.t()}
