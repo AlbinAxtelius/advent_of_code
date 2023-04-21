@@ -1,6 +1,6 @@
-alias AdventOfCode.Helpers
-
 defmodule Solutions_2020.Day_6.Part_2 do
+  use AdventOfCode.Solution, day: 6, year: 2020
+
   @spec solve_group([String.t()]) :: non_neg_integer()
   def solve_group(group) do
     group
@@ -20,7 +20,7 @@ defmodule Solutions_2020.Day_6.Part_2 do
   end
 
   def run() do
-    Helpers.read_input("day_6", "2020")
+    get_input()
     |> solve()
     |> IO.puts()
   end
