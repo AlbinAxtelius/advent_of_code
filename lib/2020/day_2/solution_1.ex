@@ -1,6 +1,6 @@
-alias AdventOfCode.Helpers
-
 defmodule Solutions_2020.Day_2.Part_1 do
+  use AdventOfCode.Solution, day: 2, year: 2020
+
   @spec parse_row([String.t()]) :: {Range.t(), String.t(), String.t()}
   def parse_row([range, letter, password]) do
     [start, stop] =
@@ -8,7 +8,7 @@ defmodule Solutions_2020.Day_2.Part_1 do
       |> String.split("-")
       |> Enum.map(&String.to_integer/1)
 
-    {Range.new(start, stop), String.at(letter, 0), password}
+    {start..stop, String.at(letter, 0), password}
   end
 
   @spec solve_row(String.t()) :: boolean()
@@ -32,7 +32,7 @@ defmodule Solutions_2020.Day_2.Part_1 do
   end
 
   def run() do
-    Helpers.read_input("day_2", "2020")
+    get_input()
     |> solve()
     |> IO.puts()
   end

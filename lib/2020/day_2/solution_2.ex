@@ -1,6 +1,6 @@
-alias AdventOfCode.Helpers
-
 defmodule Solutions_2020.Day_2.Part_2 do
+  use AdventOfCode.Solution, day: 2, year: 2020
+
   @spec parse_row([String.t()]) :: {String.t(), String.t(), String.t()}
   def parse_row([range, letter, password]) do
     [start, stop] =
@@ -33,7 +33,7 @@ defmodule Solutions_2020.Day_2.Part_2 do
   end
 
   def run() do
-    Helpers.read_input("day_2", "2020")
+    get_input()
     |> solve()
     |> IO.puts()
   end
